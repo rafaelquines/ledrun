@@ -7,7 +7,7 @@ var LedRun = require('ledrun');
 var ledRunPin = 26;
 
 // Initialize package with led pin
-var ledRun = new LedRun(26);
+var ledRun = new LedRun(ledRunPin);
 
 // Start blink each 150ms
 ledRun.start(150);
