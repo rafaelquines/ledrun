@@ -9,7 +9,7 @@ Blink a led to show that program is running on Raspberry PI with Node.js
 // Require package
 var LedRun = require('ledrun');
 
-// Define a pin that led is connected on Raspberry PI
+// Define a GPIO number that led is connected on Raspberry PI
 var ledRunPin = 26;
 
 // Initialize package with led pin
