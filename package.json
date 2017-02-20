@@ -1,0 +1,28 @@
+{
+  "name": "ledrun",
+  "version": "1.0.0",
+  "description": "Blink a led to show that program is running on Raspberry PI with Node.js",
+  "main": "ledrun.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelquines/ledrun.git"
+  },
+  "keywords": [
+    "raspberry",
+    "led",
+    "blink",
+    "gpio"
+  ],
+  "author": "rafaelquines",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rafaelquines/ledrun/issues"
+  },
+  "homepage": "https://github.com/rafaelquines/ledrun#readme",
+  "dependencies": {
+    "onoff": "^1.1.2"
+  }
+}
