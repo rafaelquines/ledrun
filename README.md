@@ -1,5 +1,5 @@
 # ledrun
-Blink a led to show that program is running on Raspberry PI with Node.js
+Blink a led to show that program is running on Raspberry PI with Node.js using pigpio
 
 ## Basic Usage
 

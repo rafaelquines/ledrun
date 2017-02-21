@@ -1,19 +1,20 @@
 "use strict";
-var Gpio = require('onoff').Gpio;
+var Gpio = require('pigpio').Gpio;
 function LedRun(pin) {
     this._pin = pin;
-    this._led = new Gpio(pin, 'out');
+    this._led = new Gpio(pin, {mode: Gpio.OUTPUT});
     this._interval = null;
 }
 LedRun.prototype.start = function(blinkInterval) {
     var that = this;
     this._interval = setInterval(function () {
-        that._led.writeSync(that._led.readSync() ^ 1); // 1 = on, 0 = off :)
+        that._led
+        that._led.digitalWrite(that._led.digitalRead() ^ 1); // 1 = on, 0 = off :)
     }, blinkInterval);
 };
 
 LedRun.prototype.stop = function() {
-    this._led.writeSync(0);
+    this._led.digitalWrite(0);
     clearInterval(this._interval);
 };
 
