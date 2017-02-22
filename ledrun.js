@@ -8,7 +8,6 @@ function LedRun(pin) {
 LedRun.prototype.start = function(blinkInterval) {
     var that = this;
     this._interval = setInterval(function () {
-        that._led
         that._led.digitalWrite(that._led.digitalRead() ^ 1); // 1 = on, 0 = off :)
     }, blinkInterval);
 };
