@@ -1,6 +1,6 @@
 {
   "name": "ledrun",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Blink a led to show that program is running on Raspberry PI with Node.js using pigpio",
   "main": "ledrun.js",
   "scripts": {
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/rafaelquines/ledrun#readme",
   "dependencies": {
-    "pigpio": "^0.4.0"
+    "pigpio": "^0.4.0",
+    "pigpio-mock": "0.0.1"
   }
 }
