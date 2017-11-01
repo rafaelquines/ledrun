@@ -1,5 +1,5 @@
 "use strict";
-var Gpio = process.env.NODE_ENV !== 'production' ? require('pigpio-mock').Gpio : require('pigpio').Gpio;
+var Gpio = !process.env.NODE_ENV || process.env.NODE_ENV == 'production' ? require('pigpio').Gpio : require('pigpio-mock').Gpio;
 function LedRun(pin) {
     this._pin = pin;
     this._led = new Gpio(pin, {mode: Gpio.OUTPUT});
