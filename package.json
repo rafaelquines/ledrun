@@ -23,9 +23,8 @@
   },
   "homepage": "https://github.com/rafaelquines/ledrun#readme",
   "dependencies": {
+    "@rafaelquines/pigpio-mock": "0.0.2",
     "pigpio": "^0.6.4"
   },
-  "devDependencies": {
-    "@rafaelquines/pigpio-mock": "0.0.2"
-  }
+  "devDependencies": {}
 }
