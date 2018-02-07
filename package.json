@@ -1,30 +1,31 @@
 {
-  "name": "ledrun",
-  "version": "1.0.6",
-  "description": "Blink a led to show that program is running on Raspberry PI with Node.js using pigpio",
-  "main": "ledrun.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rafaelquines/ledrun.git"
-  },
-  "keywords": [
-    "raspberry",
-    "led",
-    "blink",
-    "gpio"
-  ],
-  "author": "rafaelquines",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/rafaelquines/ledrun/issues"
-  },
-  "homepage": "https://github.com/rafaelquines/ledrun#readme",
-  "dependencies": {
-    "@rafaelquines/pigpio-mock": "0.0.2",
-    "pigpio": "^0.6.4"
-  },
-  "devDependencies": {}
+    "name": "ledrun",
+    "version": "1.0.7",
+    "description": "Blink a led to show that program is running on Raspberry PI with Node.js using pigpio",
+    "main": "ledrun.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rafaelquines/ledrun.git"
+    },
+    "keywords": [
+        "raspberry",
+        "led",
+        "blink",
+        "gpio"
+    ],
+    "author": "rafaelquines",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/rafaelquines/ledrun/issues"
+    },
+    "homepage": "https://github.com/rafaelquines/ledrun#readme",
+    "dependencies": {
+        "@rafaelquines/pigpio-mock": "0.0.2",
+        "detect-rpi": "^1.2.0",
+        "pigpio": "^0.6.4"
+    },
+    "devDependencies": {}
 }

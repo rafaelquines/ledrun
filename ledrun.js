@@ -1,14 +1,7 @@
 "use strict";
+var isRpi = require('detect-rpi');
 
-if ((process.env.NODE_ENV != "development") &&
-    (process.env.NODE_ENV != "production")) {
-    console.error("Invalid environment");
-    console.error("Expected environment: development or production");
-    console.error("Current environment: ", process.env.NODE_ENV);
-    process.exit(1);
-}
-
-var Gpio = process.env.NODE_ENV === 'development' ? require('@rafaelquines/pigpio-mock').Gpio : require('pigpio').Gpio;
+var Gpio = !isRpi() ? require('@rafaelquines/pigpio-mock').Gpio : require('pigpio').Gpio;
 
 function LedRun(pin) {
 
