@@ -14,10 +14,6 @@ LedRun.prototype.start = function(blinkInterval) {
     this._interval = setInterval(function() {
         that._led.digitalWrite(that._led.digitalRead() ^ 1); // 1 = on, 0 = off :)
     }, blinkInterval);
-
-
-
-    
 };
 
 LedRun.prototype.stop = function() {
