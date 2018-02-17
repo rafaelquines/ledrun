@@ -7,6 +7,16 @@ function LedRun(pin) {
     this._pin = pin;
     this._led = new Gpio(pin, { mode: Gpio.OUTPUT });
     this._interval = null;
+
+
+
+
+
+
+
+
+
+    
 }
 
 LedRun.prototype.start = function(blinkInterval) {
