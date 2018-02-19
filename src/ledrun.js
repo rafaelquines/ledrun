@@ -9,6 +9,13 @@ function LedRun(pin) {
     this._interval = null;
 }
 
+
+
+
+
+
+
+
 LedRun.prototype.start = function(blinkInterval) {
     var that = this;
     this._interval = setInterval(function() {
