@@ -3,7 +3,10 @@ node_js:
   - 6
   - 7
   - 8
-sudo: false
 script:
+  - wget abyz.me.uk/rpi/pigpio/pigpio.zip
+  - unzip pigpio.zip
+  - make -C PIGPIO
+  - make install -C PIGPIO
   - npm install
   - npm run build
