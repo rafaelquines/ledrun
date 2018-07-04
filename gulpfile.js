@@ -7,6 +7,7 @@ var DEST_DIRECTORY = 'dist/';
 gulp.task('default', [
     'compile',
     'copy-package-json',
+    'copy-readme',
     'copy-d-ts'
 ]);
 
@@ -18,6 +19,11 @@ gulp.task('compile', function() {
 
 gulp.task("copy-package-json", function () {
     return gulp.src('package.json').
+        pipe(gulp.dest(DEST_DIRECTORY));
+});
+
+gulp.task("copy-readme", function () {
+    return gulp.src('README.md').
         pipe(gulp.dest(DEST_DIRECTORY));
 });
 
