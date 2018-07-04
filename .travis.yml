@@ -3,10 +3,11 @@ node_js:
   - 6
   - 7
   - 8
-script:
+before_install:
   - wget abyz.me.uk/rpi/pigpio/pigpio.zip
   - unzip pigpio.zip
   - make -C PIGPIO
-  - make install -C PIGPIO
+  - sudo make install -C PIGPIO
+script:
   - npm install
   - npm run build
