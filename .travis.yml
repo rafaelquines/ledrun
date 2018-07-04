@@ -8,10 +8,8 @@ before_install:
   - unzip pigpio.zip
   - make -C PIGPIO
   - sudo make install -C PIGPIO
-script:
+install:
   - npm install
+script:
   - npm run build
-after_script:
-  notifications:
-    email:
-      -rafaelquines@gmail.com
+  - npm run lint
