@@ -13,9 +13,14 @@ install:
 script:
   - npm run build
   - npm run lint
+before_deploy:
+  - cd dist
 deploy:
   provider: npm
   email: "rafaelquines@gmail.com"
-  api_key: $NPM_API_KEY
+  skip_cleanup: true
+  api_key:
+    secure: "LEqosKRxgKxJmqByjvvbeSZ2UlFUg9LGRHSKs7WLMzDWE6wmDa89L1mKA6Nww9/aCkpgBYu2vAJP7qTgsTsyf5+QXeNVGW0F6mG3JbrlgVFgjRTfyauS8K2aVIIBlM/vJTbGxoGdGGDapUgVm2+ICZtQDV5CJTP6l99xQeTGsQgwwwoNwsJcQMiywRezpR6mz4x1w82MD1WmssQ+HfvQlwDmHn4yBl7Ee759M3hitBhXA36LPIXaju04iirfTHCgw3LcAtEuj1Eiz9YAcXCKACi8mOFJ2vY2kjoH7y/l9k0+KGxol9Q+bEQDZt6DUBO1AnM9rhtOajUNvxNc4/nLZ+ZLHkRjp7eqbAA2NKpRy90T7jcFguckVE6gWx55hbJwXyuG5hycCvQYiJD4yV09D1BJ4Iv7L6qFs53o/8id17KshtFImY2TpBjs90AZmbbBvJKhZtUy+lWhn+4UkjtrFDkAj+6GXWVivNI8yNZGxQpVbMySuxrBh9V0peto2X2kp0Z6Ji/hgtsci6p3ME4xXp1ID3WIoPu48ZO+dypiPvm8VJJ0Sz9zgFQmse8Sqi9108MVfRxaLuC8t1RvHoS/26YgLyeuPG2Ry1auRf3d6cmkY6XANnTDt7HvgRmefs/pY+bPZ3VZPV3NkGH01SMctCBj7l8pOZAsBQybq/s31wM="
   on:
+    branch: master
     tags: true
