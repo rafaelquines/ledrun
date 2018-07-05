@@ -16,6 +16,6 @@ script:
 deploy:
   provider: npm
   email: "rafaelquines@gmail.com"
-  api_key: "734e57f0-a62f-48ec-894e-f78e24966bf0"
+  api_key: $NPM_API_KEY
   on:
     tags: true
